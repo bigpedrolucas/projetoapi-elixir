@@ -1,7 +1,9 @@
 # Obter e traduzir letras de musicas
 
 **Projeto de Programação Funcional**
+
 **Alunos:**
+
 	Andre Lopes;
 	Pedro Lucas;
 	Augusto Miguel;
