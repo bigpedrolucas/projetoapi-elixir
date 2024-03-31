@@ -8,6 +8,7 @@
 	Pedro Lucas;
 	Augusto Miguel;
 	Christopher Alec;
+ 	Elias Victor;
 
 ## Instruções
 
