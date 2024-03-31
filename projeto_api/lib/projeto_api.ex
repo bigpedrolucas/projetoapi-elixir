@@ -1,18 +1,9 @@
 defmodule ProjetoApi do
-  @moduledoc """
-  Documentation for `ProjetoApi`.
-  """
-
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> ProjetoApi.hello()
-      :world
-
-  """
-  def hello do
-    :world
+  def main(_argv) do
+    artista = IO.gets("Digite o nome do artista:\n") |> String.trim()
+    musica  = IO.gets("Digite o nome da musica:\n")  |> String.trim()
+    Lyrics.obter_letra(artista, musica)
+    |> Resultado.mostrar_resultado
   end
+
 end
