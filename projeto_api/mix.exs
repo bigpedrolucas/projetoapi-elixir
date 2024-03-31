@@ -32,6 +32,4 @@ defmodule ProjetoApi.MixProject do
       main_module: ProjetoApi
     ]
   end
-
-
 end
