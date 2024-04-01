@@ -8,5 +8,4 @@ defmodule Lyrics do
     HTTPoison.get(url)
     |> ProcessadorApi.processar_resposta(:lyrics)
   end
-
 end
