@@ -7,7 +7,7 @@ defmodule Resultado do
 
   def mostrar_resultado({:ok, json}, traduzir) do
     {:ok, issues} = Poison.decode(json)
-    mostrar_issues(issues, traduzir)
+    mostrar_letra(issues, traduzir)
 
     {novabusca, _} =
       IO.gets("Deseja realizar uma nova busca?(0 = não, 1 = sim): ")
@@ -16,9 +16,9 @@ defmodule Resultado do
     if novabusca == 1, do: ProjetoApi.main([])
   end
 
-  defp mostrar_issues([], _), do: nil
+  defp mostrar_letra([], _), do: nil
 
-  defp mostrar_issues(i, 0) do
+  defp mostrar_letra(i, 0) do
     # Traduzir o texto inicial de espanhol para português
     lyrics =
       i["lyrics"]
@@ -28,7 +28,7 @@ defmodule Resultado do
     IO.puts("\n#{lyrics}\n")
   end
 
-  defp mostrar_issues(i, 1) do
+  defp mostrar_letra(i, 1) do
     # Chamar a função para traduzir o texto completo
     lyrics =
       i["lyrics"]
@@ -39,5 +39,5 @@ defmodule Resultado do
     IO.puts("\n#{lyrics}")
   end
 
-  defp mostrar_issues(_, _), do: IO.puts("\nOpção inválida")
+  defp mostrar_letra(_, _), do: IO.puts("\nOpção inválida")
 end
